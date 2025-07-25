@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+httpx
+python-dotenv
+pydantic-settings
+python-json-logger
+openai>=1.14
+PyYAML>=6.0
+jinja2 

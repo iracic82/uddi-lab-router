@@ -1,0 +1,12 @@
+<!-- Extends the stock Swagger-UI page FastAPI ships with -->
+{% extends "swagger_ui.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link rel="stylesheet" type="text/css" href="/swagger.css" />
+  <link rel="icon" type="image/png" href="https://your-cdn/logo32.png" />
+{% endblock %}
+
+{% block title %}
+  Instruqt Lab Router API
+{% endblock %}

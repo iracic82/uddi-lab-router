@@ -1,0 +1,59 @@
+/* ─────────────────────────────────────────────────────
+   Modern-ish skin for Swagger UI
+   - rounded cards, soft shadow
+   - Tailwind-like font & colour palette
+   - honours dark / light preference
+   ─────────────────────────────────────────────────── */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f172a;           /* slate-900  */
+    --panel: #1e293b;        /* slate-800  */
+    --panel-border: #334155; /* slate-700  */
+    --text: #e2e8f0;         /* slate-200  */
+    --muted: #94a3b8;        /* slate-400  */
+    --brand: #38bdf8;        /* sky-400    */
+    --success: #22c55e;      /* green-500  */
+    --danger: #ef4444;       /* red-500    */
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f8fafc;           /* slate-50   */
+    --panel: #ffffff;        /* white      */
+    --panel-border: #cbd5e1; /* slate-300  */
+    --text: #0f172a;         /* slate-900  */
+    --muted: #64748b;        /* slate-500  */
+    --brand: #0ea5e9;        /* sky-500    */
+    --success: #16a34a;      /* green-600  */
+    --danger: #dc2626;       /* red-600    */
+  }
+}
+
+html,body              { background: var(--bg); color: var(--text); font-family: Inter, sans-serif; }
+.swagger-ui            { max-width: 900px; margin:0 auto; padding:2rem 1rem; }
+.topbar-wrapper        { display:none; }          /* hide the big Swagger header */
+.scheme-container      { display:none; }          /* rarely needed */
+h2, h3, h4             { color: var(--text); margin: 1rem 0 0.5rem; }
+a, a:visited           { color: var(--brand); }
+
+/* endpoint “cards” --------------------------------------------------- */
+.opblock               { background: var(--panel) !important;
+                         border:1px solid var(--panel-border);
+                         border-radius: 10px; box-shadow: 0 1px 4px rgb(0 0 0 / .05); }
+.opblock-summary       { padding: 6px 12px; }
+.opblock-summary-path  { font-weight:600; }
+.opblock-description   { color: var(--muted); }
+
+/* verb colours – subtle pills instead of huge blocks */
+.opblock-summary-method { border-radius: 6px; padding:2px 8px; font-size: .75rem; }
+.opblock-get  .opblock-summary-method { background: var(--success);  color:#fff; }
+.opblock-post .opblock-summary-method { background: var(--brand);    color:#fff; }
+.opblock-put  .opblock-summary-method { background: #eab308;         color:#fff; }
+.opblock-del  .opblock-summary-method { background: var(--danger);   color:#fff; }
+
+/* request / response boxes */
+.parameters, .responses-table { border-radius:8px; }
+
+/* hide the huge “Models” sidebar by default */
+.models { display:none; }
