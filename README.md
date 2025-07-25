@@ -103,7 +103,7 @@ toolkit = RequestsToolkit.from_openapi_spec("https://your-api/portal/openapi.jso
 llm_agent.run(toolkit)
 ```
 
-See docs/AI_INTEGRATION.md for details.
+See [My docs](docs/AI_INTEGRATION.md) for details.
 
 🛡️ License
 
@@ -125,6 +125,14 @@ Pull requests and issues welcome! Want a feature? Open an issue.
 📣 About
 
 Created by Igor Racic for the Instruqt/Infoblox ecosystem.
+
+
+## 🧑‍💻 Quick links
+
+- [OpenAPI Docs (/docs)](http://localhost:8000/docs)
+- [ReDoc Portal (/portal)](http://localhost:8000/portal)
+- [AI Integration Example](docs/AI_INTEGRATION.md)
+- [.env Example](./.env.example)
 
 
 ---
